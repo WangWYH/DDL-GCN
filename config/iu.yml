@@ -1,0 +1,45 @@
+# dataset infomation
+dataset_name: iu_xray
+image_dir: D:/code/database/iu_xray/images/
+ann_path: D:/code/database/iu_xray/annotation.json
+label_path: data/labels/IU/IU_lab.csv
+
+# dataset_name: COV-CTR
+# image_dir: D:/code/database/COV-CTR/images/
+# ann_path: D:/code/database/COV-CTR/annotation.json
+# label_path: data/labels/COV-CTR/COVCTR_lab.csv
+
+# dataset_name: LGK
+# image_dir: D:/code/database/LGK/LGK
+# ann_path: D:/code/database/LGK/LGK_ann.json
+# label_path: data/labels/LGK/LGK_lab.csv
+
+
+# Hyperparameter
+max_seq_length: 60
+num_labels: 14
+threshold: 3
+
+batch_size: 20
+epochs: 30
+step_size: 80
+
+num_layers: 3
+
+gamma: 0.1
+seed: 9223
+
+#lr_ed: 0.0001
+
+# Visual Extractor
+# d_vf:
+# efficientnet: 1280
+# densenet: 1024
+# resnet101: 2048
+
+# visual_extractor: efficientnet
+# pretrain_cnn_file:
+# d_vf: 1280
+
+# Output Dir
+save_dir: results
