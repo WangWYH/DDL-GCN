@@ -29,7 +29,7 @@ def parse_opt(prefix=None):
     parser.add_argument('--batch_size', type=int, default=20, help='the number of samples for a batch')
 
     # Model settings (for visual extractor)
-    parser.add_argument('-v', '--version', type=str, default="DDL-GNN", help='main model version')
+    parser.add_argument('-v', '--version', type=str, default="DDL-GCN", help='main model version')
     parser.add_argument('--visual_extractor', type=str, default='efficientnet',
                         choices=['densenet', 'efficientnet', 'resnet101'],
                         help='the visual extractor to be used.')
