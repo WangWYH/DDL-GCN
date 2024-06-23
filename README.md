@@ -1,1 +1,1 @@
-# DDL-GNN
+# DDL-GCN
