@@ -3,9 +3,11 @@ import torch
 
 def build_optimizer(args, model):
     ve_params = list(map(id, model.visual_extractor.parameters()))
-    ed_params = filter(lambda x: id(x) not in ve_params, model.parameters())
+    gcn_params = list(map(id, model.gcn.parameters()))
+    ed_params = filter(lambda x: id(x) not in ve_params and id(x) not in gcn_params, model.parameters())
     optimizer = getattr(torch.optim, args.optim)(
         [{'params': model.visual_extractor.parameters(), 'lr': args.lr_ve},
+         {'params': model.gcn.parameters(), 'lr': args.lr_ed},
          {'params': ed_params, 'lr': args.lr_ed}],
         weight_decay=args.weight_decay,
         amsgrad=args.amsgrad
