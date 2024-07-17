@@ -64,8 +64,6 @@ def main():
     trainer.train()
     logging.info(str(args))
 
-    model.load_state_dict(torch.load('model_weights.pth'))  # 加载模型权重
-
 
 if __name__ == '__main__':
     main()
